@@ -8,6 +8,8 @@ export default function CreateCategoryModal({ onClose }) {
     onClose();
   };
 
+  const isDisabled = value.trim() === ''
+
   return (
     <div style={{
       position: "fixed",
@@ -30,6 +32,7 @@ export default function CreateCategoryModal({ onClose }) {
         <button
           onClick={handleCreate}
           style={{ marginTop: 10, padding: "8px 16px" }}
+          disabled={isDisabled}
         >
           Create
         </button>
