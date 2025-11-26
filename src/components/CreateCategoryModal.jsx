@@ -8,7 +8,7 @@ export default function CreateCategoryModal({ onClose }) {
     onClose();
   };
 
-  const isDisabled = value.trim() === ''
+  const isDisabled = value.trim().length < 3
 
   return (
     <div style={{
